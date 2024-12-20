@@ -17,3 +17,11 @@ function voltarParaMain(){
     telaHome.style.display = "flex"
     body.style.justifyContent = "center"
 }
+
+
+function toggleMenu() {
+    var menu = document.getElementsById("nav-list")
+    const toggleButton = document.getElementById("nav-toggle")
+
+    menu.style.display = "flex"
+}

@@ -24,11 +24,9 @@
             <div class="cont-pass">
                 <label>Senha: </label><input type="text" required>
             </div>
+        </div>
             <button id="button-entrar">Entrar</button>
             <button onclick="voltarParaMain()">Voltar</button>
-        </div>
-
-        
     </div>
 
 
@@ -38,20 +36,25 @@
             <header class="header">
                 <div id="container-header">
                     <img src="img/icons8-lótus.svg" alt="" id="img-header">
-                    <div class="title">
+                    <div class="title-top">
                         <h1>ADERIR</h1>
                     </div>
-
-                    <nav class="nav-list">
+                    
+                    <nav class="nav-list" id="nav-list">
+                        
                         <ul>
                             <li><a href="">ROUPAS MASCULINAS</a></li>
                             <li><a href="">ROUPAS FEMININAS</a></li>
                             <li><a href="">VARIEDADES</a></li>
                         </ul>
                     </nav>
-
                     <div class="button">
                         <button type="button" onclick="telaLogin()" id="onLogin">LOGIN</button>
+                    </div>
+                    <div class="toggle">
+                        <button class="nav-toggle" id="nav-toggle" onclick="toggleMenu()">
+                            &#9776;
+                        </button>
                     </div>
                 </div>
             </header>
@@ -59,8 +62,8 @@
             <div id="container-article">
                 <article class="article-left">
                     <h1 class="title">INSPIRE-SE,<br> COMPRE AQUI </h1>
-                    <p class="frase">" Transforme sua experiência de compra em algo único, onde estilo, qualidade e
-                        exclusividade se encontram a cada escolha. "</p>
+                    <p class="frase">"Transforme sua experiência de compra em algo único, onde estilo, qualidade e
+                        exclusividade se encontram a cada escolha."</p>
                 </article>
 
                 <article class="article-right">

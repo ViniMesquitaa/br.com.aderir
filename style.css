@@ -4,36 +4,37 @@
     box-sizing: border-box;
 }
 
-#login-home{
+#login-home {
     width: 50%;
     height: 100vh;
     background-color: rgba(7, 33, 58, 0.534);
-    z-index: 1000;
     display: none;
     animation: fadeIn 2s ease-out forwards;
 }
-.container-login{
-    height: 100vh;
+
+#telaDeLogin #login-home {
+    background-color: chartreuse;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-    
-.cont-user{
+
+.cont-user {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.cont-pass{
+
+.cont-pass {
     align-items: center;
     justify-content: center;
-    display: block;
+    display: flex;
 }
 
 #body {
-    
     background-repeat: no-repeat;
-    background: radial-gradient(circle, rgba(108,179,184,1) 0%, rgba(17,62,74,1) 92%, rgba(31,42,48,1) 100%);
+    background: radial-gradient(circle, rgba(108, 179, 184, 1) 0%, rgba(17, 62, 74, 1) 92%, rgba(31, 42, 48, 1) 100%);
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -46,7 +47,7 @@
     min-height: 100vh;
     width: 100%;
     max-width: 1200px;
-  
+
 }
 
 #about-us {
@@ -113,32 +114,36 @@
     color: rgb(176, 204, 226);
 }
 
-.button {
-    display: flex;
-    align-items: center;
-    box-shadow: 5px 4px 5px rgba(27, 40, 46, 0.616);
-    border-radius: 6%;
-}
-
-button {
+#onLogin {
+    color: aliceblue;
+    background-color: transparent;
     align-items: center;
     justify-content: center;
     display: inline-flex;
     width: 100px;
     height: 50px;
-    font-weight: bold;
-    border-radius: 6%;
-    border: 1px solid rgb(160, 160, 160);
+    font-size: 18px;
+    border-radius: 5%;
+    border: 2px solid aliceblue;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: rgb(255, 255, 255);
-}
-
-button:active {
+#onLogin:hover {
     transform: scale(0.98);
-    background-color: #ffffff;
+
+}
+.nav-toggle{
+    color: aliceblue;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 5%;
+    border: 2px solid aliceblue;
+    cursor: pointer;
 }
 
 .title {
@@ -148,15 +153,13 @@ button:active {
 }
 
 .container-aside {
-
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: 2rem;
-
 }
 
-#container-article{
+#container-article {
     display: flex;
 }
 
@@ -166,14 +169,14 @@ button:active {
     padding-top: 3rem;
 }
 
-.article-right{
+.article-right {
     width: 50%;
     justify-content: center;
     display: flex;
-  }
+}
 
-#img-semfundo{
-    max-width: auto ;
+#img-semfundo {
+    max-width: auto;
     height: 95%;
 }
 
@@ -192,16 +195,23 @@ button:active {
 
 
 @media screen and (max-width: 768px) {
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+    }
+
     #body {
-        background-size: cover; /* Garante que o gradiente não se repita e cobre a tela */
+        background-size: cover;
         background-position: center;
     }
+
     #login-home {
-        width: 90%;
+        width: 100%;
     }
 
     .title h1 {
-        font-size: 24px;
+        font-size: 10px;
     }
 
     .header {
@@ -216,18 +226,23 @@ button:active {
         display: none;
     }
 
-    .container-aside {
+    #container-article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
     }
 
-    .article-left, .article-right {
+    .article-left,
+    .article-right {
         width: 100%;
         height: auto;
     }
 
-    button {
-        width: 80px;
+    #onLogin {
+        width: 30px;
         height: 40px;
+        display: none;
     }
 
     .container-login {
@@ -235,18 +250,59 @@ button:active {
     }
 }
 
-/* Responsividade para telas muito pequenas (como celulares) */
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 768px) {
     #body {
-        background-size: cover; /* Garante que o gradiente não se repita e cobre a tela */
+        background-size: cover;
+        width: 100%;
         background-position: center;
     }
+
+    #about-us{
+        width: 100%;
+    }
+
+
     #login-home {
         width: 100%;
     }
 
-    .title h1 {
+    .title-top h1 {
         font-size: 20px;
+    }
+
+    .title{
+        font-size: 35px;
+    }
+
+    .frase{
+        font-size: 13px;
+        padding-top: 20px;
+        text-align: justify;
+    }
+
+    .nav-toggle {
+        background: none;
+        border: none;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        display: none; /* Inicialmente escondido em telas maiores */
+        z-index: 1001;
+    }
+
+    .nav-list {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        transform: translateY(-100%); /* Esconde o menu por padrão */
+        transition: transform 0.3s ease-in-out; /* Transição suave */
     }
 
     .nav-list ul {
@@ -255,18 +311,37 @@ button:active {
         gap: 15px;
     }
 
-    .container-aside {
-        padding: 0 10px;
+    #img-semfundo{
+        padding-top: 20px;
+        height: 300px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+
+    }
+    .article-left{
+        width: 80%;
+        height: auto;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .article-left, .article-right {
-        width: 100%;
+    .article-right {
+        width: 50%;
         height: auto;
     }
 
     button {
         width: 70px;
         height: 35px;
+    }
+
+    .toggle{
+        padding-left: 50px;
+    }
+    .nav-toggle{
+        display: flex;
     }
 }
