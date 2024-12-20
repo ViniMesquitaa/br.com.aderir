@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="img/icons8-lótus.svg">
+    <title>ADERIR | SHOP</title>
+</head>
+
+<body id="body">
+    <div id="login-home" class="hidden">
+        <div class="container-login" id="telaDeLogin">
+            <div class="cont-user">
+                <label>Usuario: </label><input type="text" required>
+            </div>
+    
+            <div class="cont-pass">
+                <label>Senha: </label><input type="text" required>
+            </div>
+            <button id="button-entrar">Entrar</button>
+            <button onclick="voltarParaMain()">Voltar</button>
+        </div>
+
+        
+    </div>
+
+
+
+    <div id="main" class="hidden">
+        <section id="about-us" class="hidden">
+            <header class="header">
+                <div id="container-header">
+                    <img src="img/icons8-lótus.svg" alt="" id="img-header">
+                    <div class="title">
+                        <h1>ADERIR</h1>
+                    </div>
+
+                    <nav class="nav-list">
+                        <ul>
+                            <li><a href="">ROUPAS MASCULINAS</a></li>
+                            <li><a href="">ROUPAS FEMININAS</a></li>
+                            <li><a href="">VARIEDADES</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="button">
+                        <button type="button" onclick="telaLogin()" id="onLogin">LOGIN</button>
+                    </div>
+                </div>
+            </header>
+
+            <div id="container-article">
+                <article class="article-left">
+                    <h1 class="title">INSPIRE-SE,<br> COMPRE AQUI </h1>
+                    <p class="frase">" Transforme sua experiência de compra em algo único, onde estilo, qualidade e
+                        exclusividade se encontram a cada escolha. "</p>
+                </article>
+
+                <article class="article-right">
+                    <figure>
+                        <img src="img/imgtest-semfundo.png" alt="" id="img-semfundo">
+                    </figure>
+                </article>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
